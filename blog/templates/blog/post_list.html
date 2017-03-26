@@ -7,7 +7,11 @@
         <p>It's Alive!!!!</p>
         <p>These are our current post</p>
         {% for post in posts %}
-            {{ post }}
+            <div>
+                <p>published: {{ post.published_date }}</p>
+                <h1><a href="">{{ post.title }}</a></h1>
+                <p>{{ post.text|linebreaksbr }}</p>
+            </div>
         {% endfor %}
         <p>If you'd like to add a new post</p>
     </body>
